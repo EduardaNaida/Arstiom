@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+The head contains the title of the application window, and the various
+imports that are needed.
+
+First we link to the style sheet that we will use for the project.
+This is still fairly small, as compared to what may be needed for a
+larger project. In such cases it might be useful to divide the css file
+into a number of smaller css files.
+
+One such division could be to have one file for the overall theme of
+the whole system, and then separate css files for the pecularities of
+different modules and pages. It is important to remember that css
+definitions override each other. This means that we can define partial
+styles, which are refined or overridden in later loaded style sheets.
+
+Next we import all the javascript files that are needed for the project.
+Among the javascript files is also the jQuery library that will be used.
+
+Also note that the order of loading is important, in that javascript is
+a script (yes!) language, and the functions will be defined and
+run in the order of loading.
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>Simple calculator</title>
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+    <script type="text/javascript" src="Dictionary.js"></script>
+    <script type="text/javascript" src="jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="Model.js"></script>
+    <script type="text/javascript" src="MathFunc.js"></script>
+    <script type="text/javascript" src="Control.js"></script>
+</head>
+<!--
+The body is the place where all the action taks place. Well, action might
+be a bit too strong word. The body defines the containers that will contain
+the information, in order to present it to the user.
+
+As you can see, the containers in most cases have an element name
+(e.g., span or div), an optional class name (e.g., b-wid) and an
+identification tag (e.g., fun1 or arg2).
+
+Items belonging to the control-view have a javascript call to the
+corresponding function that will perform the action. The input fields
+have the contenteditable property set to "true", which means that we
+can use them as form fields.
+
+The sum-tag is a fixed div, producing a label. The display tag denotes
+div where the results are displayed after the action has been performed.
+
+Note here that there are no strings in the HTML code here. All the
+information is created and inserted by javascript functions when the
+page has been loaded (see the bottom part of the file "Control.js").
+The HTML structure thus turns into a framework that needs to be populated.
+
+-->
+<body>
+    <div id ="args">
+        <span class="b-wid" id="fun1" onclick="doAdd()"></span>
+        <span class="b-wid" id="fun2" onclick="doSubtract()"></span>
+        <span class="args" id="arg1" contenteditable="true"></span>
+        <span class="args" id="arg2" contenteditable="true"></span>
+    </div>
+
+    <div id="sum-tag"></div>
+    <div id="display"></div>
+
+</body>
+</html>
+
+<!-- =========================================================================
+END OF FILE
+========================================================================== -->

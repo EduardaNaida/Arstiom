@@ -1,0 +1,22 @@
+
+
+// allDrinkNames(drinkCategory) 
+// getDrinkStock(drinkName, drinkCategory, store) 
+// getDrinkStock(drinkName, drinkCategory) 
+// setDrinkAvailability(drinkName, drinkCategory, isAvailable) 
+// isDrinkAvailable(drinkName, drinkCategory) 
+// setDrinkSize(drinkName, drinkCategory, size) 
+// getDrinkSize(drinkName, drinkCategory) 
+// setDrinkStrength(drinkName, drinkCategory, str) 
+// getDrinkStrength(drinkName, drinkCategory) 
+// setDrinkProducer(drinkName, drinkCategory, producer) 
+// getDrinkProducer(drinkName, drinkCategory) 
+// setDrinkType (drinkName, drinkCategory, type) 
+// getDrinkType (drinkName, drinkCategory) 
+// getDrinkData (drinkName, drinkCategory) 
+// applyDrink(drinkName, drinkCategory, fun)
+
+
+function applyContainer(open, close, fun){
+    return open + fun() + close;
+}

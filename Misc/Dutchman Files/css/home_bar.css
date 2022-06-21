@@ -1,0 +1,294 @@
+
+body {
+    background-color:rgba(45, 45, 45, 1.0)
+}
+
+#headertitle
+{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 120px;
+    color: white;
+    
+}
+
+button {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.button_container
+{
+ font-size: 30px;
+ display: flex;
+ justify-content: space-between;
+ padding-top: 210px;
+ padding-left: 30px;
+ padding-right: 30px;
+ border: none;
+
+}
+#menu_content {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/dutchman-painting-dix.jpeg);
+    margin-top: 0;
+    background-repeat: no-repeat ;
+    height: 750px;
+    width: 1880px;
+    background-size: 1880px 800px;
+    border-radius: 5px;
+}
+
+#menu_content p {
+    color: white;
+    text-align: center;
+}
+
+#main_content
+{
+    
+    margin-top: 10px;
+    margin-left: 260px;
+    margin-right: 340px;
+    height: 800px;
+    width: 1350px;
+    border-radius: 5px;
+    background-color: rgb(0,0,0,0.1);
+    color: white;
+}
+
+#loginstatus {
+    color: white;
+    position: relative;
+    bottom: 135px;
+    float:right;
+    padding-right: 20px;
+    padding-bottom: 80px;
+}
+
+#loginstatus button {
+    color:grey;
+}
+
+#log {
+    float: right;
+}
+
+#logout {
+    color: grey;
+    position: relative;
+    bottom: 135px;
+    left: 190px;
+    width: 55px;
+    height: 20px;
+    
+}
+
+
+#main_content h1 {
+    color: white;
+    text-align: center;
+    opacity:1;
+}
+
+.buttons {
+    cursor: pointer;
+}
+
+#header_buttons 
+
+.top_header
+{
+    height: 100px;
+    margin-top: -25;
+    
+}
+
+.logo
+{
+    height: 100px;
+}
+
+.logo img
+{
+    width: 150px;
+}
+
+.header_links
+{
+    font-size: 30px;
+    margin-left: 800px;
+}
+
+.links
+{
+    display: inline;
+    left: 50px;
+    padding-top: 50px;
+    padding-left: 1400px;
+    width: 400px;
+}
+
+.menu_img {
+    display:block;
+}
+
+.menu_img img
+{
+    opacity: 0.6;
+    width: 150px;
+}
+
+#content_right {
+    margin-right: 20px;
+    position: relative;
+    float: right;
+    border-radius: 10px;
+    background-color: rgb(0,0,0,0.1);
+    height: 720px;
+    width: 300px;
+}
+
+#content_left {
+    margin-left: 30px;
+    width: 160px;
+    height: 150px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background-color: rgb(0,0,0,0.1);
+}
+
+#content_img {
+    float: right;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 30px;
+    margin-right: 15px;
+    width: 815px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: rgb(0,0,0,0.1);
+}
+
+#content_mid {
+    padding-top: 1px;
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 990px;
+    height: 450px;
+    border-radius: 10px;
+    background-color: rgb(0,0,0,0.1);
+}
+
+#control_space {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 990px;
+    border-radius: 10px;
+    background-color: rgb(0,0,0,0.1);
+    height: 80px;
+}
+
+#beer_logo {
+    padding-top: 15px;
+    height: 110px;
+
+}
+
+#spirits_logo {
+    width: 150px;
+}
+
+.content_mid_wrapper {
+    float: left;
+    height: 320px;
+    width: 240px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+    background-color: rgb(0,0,0,0.1);
+}
+
+#content_mid_info {
+    margin: 10px;
+    width: 970px;
+    height: 100px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: rgb(0,0,0,0.1);
+}
+
+#control_space {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.control_buttons {
+    font-size: 30px;
+}
+
+#content_mid_info_title {
+    padding-top: 25px;
+}
+
+.content_mid_container {
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    height: 190px;
+    width: 200px;
+
+
+}
+
+.content_mid_titles {
+    font-size: 25px;
+}
+
+#content_mid button{
+    border:none;
+    border-radius: 5px;
+    background-color:rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 80px;
+    height: 30px;
+
+}
+#content_mid p {
+    margin-left: 25px;
+    margin-top: 30px;
+    float: left;
+}
+
+#content_right_info {
+
+    height: 80px;
+    width: 300px;
+    position:absolute;
+    bottom: 0;
+    border-radius: 10px;
+}
+
+#content_right_info_button {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(0,0,0, 0.6);
+    border: none;
+    top: 585px;
+    left: 200px;
+
+}
+#content_right_info_text {
+    float: left;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+.img-drink {
+    width: 200px;
+    height: 200px;
+}

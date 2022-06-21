@@ -1,0 +1,39 @@
+/*
+The definitions are listed in order of superceeding power. The element
+level is the weakest of the style levels, and will be superceeded by both
+class and identity definitions.
+
+ELEMENT LEVEL DEFINITIONS
+*/
+div {
+    width : 250px;
+    text-align : right;
+    /*border : 2px solid*/
+     }
+
+/*
+CLASS LEVEL DEFINITIONS
+*/
+.b-wid {
+    border : 3px solid;
+    padding: 2px;
+    border-color: darkred;
+    background-color: burlywood;
+}
+
+.args {
+    width : 30px;
+    padding : 5px;
+    text-align: right;
+}
+
+/*
+IDENTITY LEVEL DEFINITIONS
+*/
+#sum-tag {
+    border : 2px;
+    border-bottom-color: blue;
+}
+/* ==========================================================================
+END OF FILE
+==========================================================================n*/

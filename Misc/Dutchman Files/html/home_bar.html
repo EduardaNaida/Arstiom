@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel ="Stylesheet" href="../css/home_bar.css"
+    <title></title>
+    <script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+    <script type = "text/javascript" src = "../translate.js"></script>
+    <script type = "text/javascript" src = "../translate_db_eng.js"></script>
+    <script type = "text/javascript" src = "../translate_db_ru.js"></script>
+    <script type = "text/javascript" src = "../Login.js"></script>
+    <script type = "text/javascript" src = "../update_view.js"></script>
+    <script type = "text/javascript" src = "../../Internationalization/Dictionary.js"></script>
+    <script type = "text/javascript" src = "../loader.js"></script>
+    <script type = "text/javascript" src = "../Beverages.js"></script>
+    <script type = "text/javascript" src = "../DBLoaded.js"></script>
+    <script type = "text/javascript" src = "../drag_drop_cart.js"></script>
+    <script type = "text/javascript" src = "../normal_drink_db.js"></script>
+    <script type = "text/javascript" src = "../order_db.js"></script>
+    <script type = "text/javascript" src = "../drink_api.js"></script>
+    <script type = "text/javascript" src = "../drink_display.js"></script>
+    <script type = "text/javascript" src = "../gen_func.js"></script>
+    <script type = "text/javascript" src = "../loadMenu.js"></script>
+
+
+</head>
+<body>
+    <div id="menu_content">
+        <div class = "menu_wrapper">
+            <div class = "menu_img">
+                <img src="../img/dutchman.png" alt="The Flying Dutchman">   
+            </div>
+            <div id = "loginstatus">
+                <input type="text" placeholder="Username" name = "username" id = "usinput">
+                <input type="text" placeholder="Password" name = "password" id = "pwinput">
+                <button type ="submit" onclick = "loginClicked(document.getElementById('usinput').value, document.getElementById('pwinput').value)">Login</button>
+            </div>
+            <div id = "log">
+            <button id = "logout" onClick = "logout()">Logout</button>
+            </div>
+            
+
+        </div>
+        <h1 id ="headertitle"></h1>
+        <p id = "pageinfo"></p>
+        <div id="header_buttons">     
+                 <div class = "button_container">
+                    <p class = "buttons" id = "menu_button" onclick = "updateContent('menu')"></p>
+                    <p class = "buttons" id = "orders_button" onclick = "updateContent('orders')"></p>
+                    <p class = "buttons" id = "products_button"></p>
+                </div>
+                
+        </div>
+    </div>
+
+    <div id = main_content>
+        <h1 id = "content_header"></h1>
+        <div id = "content_right" ondrop = "drop(event)" ondragover="allowDrop(event)">
+            <h1 id = "content_right_header" ondrop="dropProduct(event)" ondragover="allowDrop(event)">Cart</h1>
+            <div id = "content_right_info">
+                <p id = "content_right_info_text">Price:</p>
+            </div>
+            <button id = "content_right_info_button" onclick="contentRightClick()">Checkout</button>
+        </div>
+        <div id = "content_img">
+        <div id = "dr" ><img ></div>
+            <img id = "beer_logo" > 
+            <img id = "wine_logo" > 
+            <img id = "spirits_logo" >
+        </div>
+        <div id = "content_left">
+            <h1 id = "page_nr">Page number: 1</h1>
+        </div>
+        <div id = "content_mid">
+            <div id = "content_mid_info">
+                <h1 id = "content_mid_info_title">Beer menu</h1>
+            </div>
+            <div id = "content_mid_wrapper_1" class = "content_mid_wrapper" draggable="true" ondragstart=drag(event)>
+                <h1 id = "content_mid_title_1" class = "content_mid_titles"><span id = content_mid_span_1></span></h1>
+                <div id = "content_mid_1_container"  class = "content_mid_container"></div>
+                <p id = "content_mid_1_text">Pris: 48kr</p>
+                <button id = "content_mid_1_button" class = "content_mid_button">Köp</button>
+            </div>
+            <div id = "content_mid_wrapper_2" class = "content_mid_wrapper" draggable="true" ondragstart=drag(event)>
+                <span id = "hover_mid_2" class = "hover_mid"></span>
+                <h1 id = "content_mid_title_2" class = "content_mid_titles"><span id = content_mid_span_2></span></h1>
+                <div id = "content_mid_2_container"  class = "content_mid_container"></div>
+                <p id = "content_mid_2_text">Ass</p>
+                <button id = "content_mid_1_button" class = "content_mid_button"></button>
+            </div>
+            <div id = "content_mid_wrapper_3"  class = "content_mid_wrapper" draggable="true" ondragstart=drag(event)>
+                <h1 id = "content_mid_title_3" class = "content_mid_titles"><span id = content_mid_span_3></span></h1>
+                <div id = "content_mid_3_container"  class = "content_mid_container"></div>
+                <p id = "content_mid_3_text">Pris: 20kr</p>
+                <button id = "content_mid_1_button" class = "content_mid_button"></button>
+            </div>
+            <div id = "content_mid_wrapper_4"  class = "content_mid_wrapper" draggable="true" ondragstart=drag(event)>
+                <h1 id = "content_mid_title_4" class = "content_mid_titles"><span id = content_mid_span_4></span></h1>
+                <div id = "content_mid_4_container"  class = "content_mid_container"></div>
+                <p id = "content_mid_4_text">Pris : 10kr</p>
+                <button id = "content_mid_1_button" class = "content_mid_button"></button>
+            </div>
+        </div>
+        <div id = "control_space">
+            <p id = "prev_page" class = "control_buttons">Previous page</p>
+            <p id = "undo" class = "control_buttons" onclick = "tjarkWeber()">Undo</p>
+            <p id = "redo" class = "control_buttons" onclick = "undoTjark()">Redo</p>
+            <p id = "next_page" class = "control_buttons">Next page</p>
+        </div>
+    </div>
+</body>
+</html>
